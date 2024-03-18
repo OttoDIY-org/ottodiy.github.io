@@ -1,0 +1,154 @@
+<html><head>
+<title>Ottodiy Micropython Web Installer</title>
+  
+<meta name="description" content="Easily allow users to flash new firmware for their ESP32 Otto on the web.">
+<meta name="viewport" content="width=device-width">
+
+<meta property="og:title" content="Ottodiy Micropython Web Installer">
+<meta property="og:site_name" content="Ottodiy Micropython Web Installer">
+<meta property="og:url" content="https://ottodiy-org.github.io/Ottodiy_Runtime_Esp32-micropython/">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Easily allow users to flash new firmware for their ESP32 Otto on the web.">
+<meta property="og:image" content="https://esphome.github.io/esp-web-tools/static/social.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ottodiy Micropython Web Installer">
+<meta name="twitter:description" content="Easily allow users to flash new firmware for their ESP32 Otto on the web.">
+<meta name="twitter:image" content="https://esphome.github.io/esp-web-tools/static/social.png">
+<meta name="color-scheme" content="dark light">
+    <style>
+      body {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, sans-serif;
+        padding: 0;
+        margin: 0;
+        line-height: 1.4;
+      }
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 12px;
+      }
+      h2 {
+        margin-top: 2em;
+      }
+      h3 {
+        margin-top: 1.5em;
+      }
+      .projects {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
+      .projects a {
+        color: initial;
+        text-decoration: none;
+      }
+      .project .logo img {
+        height: 50px;
+      }
+      .project .name {
+        margin-top: 8px;
+      }
+      a {
+        color: #03a9f4;
+      }
+      .screenshot {
+        text-align: center;
+      }
+      .screenshot img {
+        max-width: 100%;
+        box-shadow:
+          rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+          rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        border-radius: 4px;
+      }
+      .screenshot i {
+        margin-top: 4px;
+        display: block;
+      }
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin-bottom: 25px;
+        background: #ccc;
+      }
+      .hidden {
+        display: none;
+      }
+      .content pre {
+        display: block;
+        padding-left: 8px;
+        overflow-y: scroll;
+      }
+      .footer {
+        margin-top: 24px;
+        border-top: 1px solid #ccc;
+        padding-top: 24px;
+        text-align: center;
+      }
+      .footer .initiative {
+        font-style: italic;
+        margin-top: 16px;
+      }
+      table {
+        border-spacing: 0;
+      }
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #333;
+          color: #fff;
+        }
+        a {
+          color: #58a6ff;
+        }
+      }
+    </style>
+<script module="">
+      import("https://unpkg.com/esp-web-tools@8.0.5/dist/web/install-button.js?module");
+</script>
+</head>
+<body style="">
+    <div class="content">
+      <div align="center">
+      <h1>Ottodiy Esp32 Micropython<br> Web Installer</h1>
+      </div>
+      <p>
+        User friendly tool to manage ESP32 Otto's in the browser:
+      </p>
+      <p>
+        This will install 
+        <a href="https://github.com/ottodiy-org/Ottodiy_Runtime_Esp32-micropython">Ottodiy Esp32 Micropython Runtime</a>. To get started, connect an ESP32
+        Otto to your computer and hit the connect button:
+      </p>
+
+      <esp-web-install-button manifest="manifest.json" install-supported="">
+        <i slot="unsupported">
+          The installer is not available because your browser does not support Web
+          Serial. Open this page in Google Chrome or Microsoft Edge instead<span class="not-supported-i hidden">
+            (but not on your iOS device)</span>.
+        </i>
+      </esp-web-install-button>
+      <p>
+        Web installer is available only in Google Chrome and Microsoft Edge browsers<span class="not-supported-i hidden">(but not on your iOS device)</span>. 
+      </p>
+    </div>
+      <div class="footer">
+        <div>
+          ESP Web Tools is
+          <a href="https://github.com/esphome/esp-web-tools">open source</a>.
+        </div>
+      </div>
+    <script>
+      if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        document.querySelector(".not-supported-i").classList.remove("hidden");
+      }
+    </script>
+  </body></html>
