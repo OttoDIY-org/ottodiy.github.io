@@ -16,6 +16,10 @@
 <meta name="twitter:image" content="https://esphome.github.io/esp-web-tools/static/social.png">
 <meta name="color-scheme" content="dark light">
     <style>
+      center {
+        display: block;
+        text-align: -webkit-center;
+      }
       body {
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
           Roboto, Ubuntu, sans-serif;
@@ -111,7 +115,8 @@
         }
       }
     </style>
-<script module="">
+
+  <script module="">
       import("https://unpkg.com/esp-web-tools@8.0.5/dist/web/install-button.js?module");
 </script>
 </head>
@@ -128,14 +133,16 @@
         <a href="https://github.com/ottodiy-org/Ottodiy_Runtime_Esp32-micropython">Ottodiy Esp32 Micropython Runtime</a>. To get started, connect an ESP32
         Otto to your computer and hit the connect button:
       </p>
-
+<center style="margin-bottom: 25px">
       <esp-web-install-button manifest="manifest.json" install-supported="">
+        <slot name="activate"><button>Install</button></slot>
         <i slot="unsupported">
           The installer is not available because your browser does not support Web
           Serial. Open this page in Google Chrome or Microsoft Edge instead<span class="not-supported-i hidden">
             (but not on your iOS device)</span>.
         </i>
       </esp-web-install-button>
+    </center>
       <p>
         Web installer is available only in Google Chrome and Microsoft Edge browsers<span class="not-supported-i hidden">(but not on your iOS device)</span>. 
       </p>
