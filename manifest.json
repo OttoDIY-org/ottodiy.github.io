@@ -1,0 +1,14 @@
+{
+  "name": "Ottodiy MicroPython",
+  "version": "2024.03.17-dev",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "ESP32_OttodiyMP-2024.03.17-dev.bin", "offset": 0 }]
+    },
+    {
+      "chipFamily": "ESP32-S2",
+      "parts": [{ "path": "ESP32-S2_OttodiyMP-2024.03.17-dev.bin", "offset": 0 }]
+    }
+  ]
+}
